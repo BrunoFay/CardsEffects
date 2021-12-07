@@ -12,7 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.5em;
-  box-shadow: 2px 0px 30px 7px black
+  box-shadow: 2px 1px 25px 7px black
 }
 
 .image-card {
@@ -84,22 +84,10 @@ position: absolute;
 }
 /* effects */
 
-.overlay {
 
-  border-radius: 0.7em;
-  border: solid black;
-  width: 40em;
-  height: 20em;
-  margin: 7em 35em;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5em;
-  color: rgba(130, 130, 130, 0.5);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-}
 
 .spin {
-  animation: spin normal 3s linear;
+  animation: spin infinite 5s alternate-reverse;
 }
 
 
@@ -115,29 +103,29 @@ position: absolute;
 }
 
 .rotation {
-  animation: rotation reverse 5s linear;
+  animation: rotation infinite 5s alternate-reverse;
 }
 
 
 
 @keyframes rotation {
   from {
-    transform: rotateZ(1deg);
-    transform: rotateX(1deg);
-    transform: rotateY(1deg)
-  }
-
-  to {
     transform: rotateZ(500deg);
     transform: rotateX(500deg);
     transform: rotateY(500deg);
     box-shadow: none;
+  }
+  
+  to {
+    transform: rotateZ(1deg);
+    transform: rotateX(1deg);
+    transform: rotateY(1deg);
 
   }
 }
 
 .flip-3D {
-  animation: flip-3D alternate-reverse 5s linear;
+  animation: flip-3D infinite 5s alternate-reverse;
 }
 
 
@@ -146,12 +134,12 @@ position: absolute;
   from {
     transform: skewX(180deg);
     transform: skewY(180deg);
+    box-shadow: none;
   }
-
+  
   to {
     transform: skewX(1deg);
     transform: skewY(1deg);
-    box-shadow: none;
 
   }
 
@@ -159,42 +147,52 @@ position: absolute;
 }
 
 .zoom-ot {
-  animation: zoom-ot reverse 5s ease-out;
+  animation: zoom-ot infinite 5s alternate-reverse;
 }
 
 @keyframes zoom-ot {
   from {
 
     transform: scale(0.001);
+    box-shadow: none;
 
   }
 
   to {
     transform: scale(1);
 
-    box-shadow: none;
 
   }
 }
 
 
 .top-moviment {
-  animation: top-moviment alternate-reverse 5s linear;
+  animation: top-moviment infinite 5s alternate-reverse;
 }
-
-
-
 @keyframes top-moviment {
   from {
 
     transform: translateY(-80em);
+    opacity: 0;
+    box-shadow: none;
 
 
   }
 
   to {
     transform: translateY(350px);
-    opacity: 0;
-    box-shadow: none;
+  }
+}
+.drop-moviment{
+  animation:drop-moviment infinite 5s alternate-reverse;
+}
+@keyframes drop-moviment{
+  from{
+    transform: rotateX(80deg);
+    box-shadow:27px 7px 25px 25px rgba(0, 0, 0, 0.774);
+  }
+  
+  to {
+    transform: rotateX(1deg);
   }
 }

@@ -7,8 +7,11 @@ function App() {
   const effect = useRef()
   function flipEffect({target}) {
     const catchEffect = effect.current
+    console.log(catchEffect.classList.length);
+   
     
     catchEffect.className=`${target.value}`
+   
       
   }
   return (
@@ -18,7 +21,9 @@ function App() {
       <button value='rotation' onClick={(e)=>flipEffect(e)}>rotação</button>
       <button value='flip-3D' onClick={(e)=>flipEffect(e)}>flip 3D</button>
       <button value='zoom-ot' onClick={(e)=>flipEffect(e)}>zoom reverso</button>
-      <button value='top-moviment ' onClick={(e)=>flipEffect(e)}>movimento top</button>
+      <button value='top-moviment' onClick={(e)=>flipEffect(e)}>movimento top</button>
+      <button value='drop-moviment' onClick={(e)=>flipEffect(e)}>deitar</button>
+
     </div>
 
     <div id ='card-container' ref={effect}>
