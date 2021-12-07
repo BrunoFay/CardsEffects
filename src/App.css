@@ -1,38 +1,200 @@
-.App {
-  text-align: center;
+body {
+  background-color: rgba(240, 180, 180, 0.363);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#card-container {
+  background: rgba(56, 40, 40, 0.589);
+  border-radius: 0.7em;
+  border: solid black;
+  width: 20em;
+  height: 30em;
+  margin: 7em 35em;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1.5em;
+  box-shadow: 2px 0px 30px 7px black
 }
 
-.App-link {
-  color: #61dafb;
+.image-card {
+  min-width: 18em;
+  border-radius: 0.3em;
+  min-height: 18em;
+  margin: 1em 2.5em 0 1em;
+  max-height: auto;
+  box-shadow: 0px 1px 5px 1px black
 }
 
-@keyframes App-logo-spin {
+.signature {
+  margin-top: 1em;
+  font-style: italic;
+  color: grey;
+}
+
+.infos-author {
+  max-height: 4em;
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  border-top: rgba(58, 128, 0, 0.445) solid;
+  border-spacing: 0.01em;
+}
+
+.name-author {
+  font-weight: bolder;
+  color: black;
+  font-style: normal;
+  margin-left: 0.3em;
+}
+
+.perfil-image {
+  border-radius: 100%;
+  max-width: 50%;
+  max-height: 70%;
+  margin-top: 0.5em;
+
+}
+
+.location-infos {
+  background: crimson;
+  display: flex;
+  justify-content: space-around;
+}
+
+.title-card {
+  text-align: center;
+  background-color: darkblue;
+  font-size: x-large;
+  font-weight: 400;
+}
+.buttons{
+  display: flex;
+  border-radius: 2em;
+  background-color: burlywood;
+  justify-content: space-evenly;
+  width: 50em;
+  margin-left: 20%;
+  top: 10px;
+  height: 4em;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+position: absolute;
+}
+.buttons button{
+  margin-top: 1.5em;
+  max-height: 40%;
+}
+/* effects */
+
+.overlay {
+
+  border-radius: 0.7em;
+  border: solid black;
+  width: 40em;
+  height: 20em;
+  margin: 7em 35em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  color: rgba(130, 130, 130, 0.5);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.spin {
+  animation: spin normal 3s linear;
+}
+
+
+
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+.rotation {
+  animation: rotation reverse 5s linear;
+}
+
+
+
+@keyframes rotation {
+  from {
+    transform: rotateZ(1deg);
+    transform: rotateX(1deg);
+    transform: rotateY(1deg)
+  }
+
+  to {
+    transform: rotateZ(500deg);
+    transform: rotateX(500deg);
+    transform: rotateY(500deg);
+    box-shadow: none;
+
+  }
+}
+
+.flip-3D {
+  animation: flip-3D alternate-reverse 5s linear;
+}
+
+
+
+@keyframes flip-3D {
+  from {
+    transform: skewX(180deg);
+    transform: skewY(180deg);
+  }
+
+  to {
+    transform: skewX(1deg);
+    transform: skewY(1deg);
+    box-shadow: none;
+
+  }
+
+
+}
+
+.zoom-ot {
+  animation: zoom-ot reverse 5s ease-out;
+}
+
+@keyframes zoom-ot {
+  from {
+
+    transform: scale(0.001);
+
+  }
+
+  to {
+    transform: scale(1);
+
+    box-shadow: none;
+
+  }
+}
+
+
+.top-moviment {
+  animation: top-moviment alternate-reverse 5s linear;
+}
+
+
+
+@keyframes top-moviment {
+  from {
+
+    transform: translateY(-80em);
+
+
+  }
+
+  to {
+    transform: translateY(350px);
+    opacity: 0;
+    box-shadow: none;
   }
 }
