@@ -1,11 +1,11 @@
 body {
-  background-color: rgba(240, 180, 180, 0.363);
+  background-image: url('https://cdn.pixabay.com/photo/2021/07/26/21/30/digital-paper-6495242__340.jpg');
 }
 
 #card-container {
-  background: rgba(56, 40, 40, 0.589);
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
   border-radius: 0.7em;
-  border: solid black;
+  border: thin rgb(245, 220, 220) ridge;
   width: 20em;
   height: 30em;
   margin: 7em 35em;
@@ -25,7 +25,7 @@ body {
 }
 
 .signature {
-  margin-top: 1em;
+  margin: 1em 0;
   font-style: italic;
   color: grey;
 }
@@ -46,41 +46,55 @@ body {
   margin-left: 0.3em;
 }
 
-.perfil-image {
-  border-radius: 100%;
-  max-width: 50%;
-  max-height: 70%;
-  margin-top: 0.5em;
+.gitHub-link {
+  text-decoration: none;
+  color: whitesmoke;
+  margin-top: 1em;
 
 }
 
 .location-infos {
+  margin: 0 0.5em;
+  border-radius: 3px;
   background: crimson;
   display: flex;
+  font-family:Arial, Helvetica, sans-serif;
   justify-content: space-around;
 }
 
 .title-card {
   text-align: center;
-  background-color: darkblue;
+  color: #837f7ae5;
+ font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: x-large;
   font-weight: 400;
 }
-.buttons{
+
+.buttons {
   display: flex;
   border-radius: 2em;
-  background-color: burlywood;
+  background: linear-gradient(to right, #794913af, #cc5333);
   justify-content: space-evenly;
+  border: thin rgb(252, 249, 249) ridge;
   width: 50em;
-  margin-left: 20%;
+  margin-left: 22%;
   top: 10px;
   height: 4em;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-position: absolute;
+  position: absolute;
 }
-.buttons button{
+
+.buttons button {
   margin-top: 1.5em;
   max-height: 40%;
+  border-radius: 7px;
+  border: none;
+  background-color: #89ca7c;
+  color: rgb(27, 21, 21);
+  font-weight: bolder;
+}
+.buttons button:hover{
+  background-color: blanchedalmond;
 }
 /* effects */
 
@@ -90,11 +104,10 @@ position: absolute;
   animation: spin infinite 5s alternate-reverse;
 }
 
-
-
 @keyframes spin {
   from {
     transform: rotate(0deg);
+
   }
 
   to {
@@ -110,15 +123,17 @@ position: absolute;
 
 @keyframes rotation {
   from {
-    transform: rotateZ(500deg);
-    transform: rotateX(500deg);
-    transform: rotateY(500deg);
-    box-shadow: none;
+    transform: rotateY(200deg);
+    color: bisque;
+    background: none;
+    box-shadow: 27px -100px 20px 20px rgba(0, 0, 0, 0.774);
+
+
   }
-  
+
   to {
-    transform: rotateZ(1deg);
-    transform: rotateX(1deg);
+
+
     transform: rotateY(1deg);
 
   }
@@ -134,10 +149,15 @@ position: absolute;
   from {
     transform: skewX(180deg);
     transform: skewY(180deg);
-    box-shadow: none;
+    background: none;
+    box-shadow: 50px 57px 20px 20px rgba(0, 0, 0, 0.774);
+
+    color: bisque;
   }
-  
+
   to {
+    box-shadow: -50px 70px 20px 20px rgba(0, 0, 0, 0.486);
+
     transform: skewX(1deg);
     transform: skewY(1deg);
 
@@ -154,7 +174,6 @@ position: absolute;
   from {
 
     transform: scale(0.001);
-    box-shadow: none;
 
   }
 
@@ -169,6 +188,7 @@ position: absolute;
 .top-moviment {
   animation: top-moviment infinite 5s alternate-reverse;
 }
+
 @keyframes top-moviment {
   from {
 
@@ -183,16 +203,84 @@ position: absolute;
     transform: translateY(350px);
   }
 }
-.drop-moviment{
-  animation:drop-moviment infinite 5s alternate-reverse;
+
+.lateral-movement {
+  animation: lateral-movement infinite 10s reverse;
 }
-@keyframes drop-moviment{
-  from{
+
+@keyframes lateral-movement {
+/*   from {
+    transform: rotateZ(600deg);
     transform: rotateX(80deg);
-    box-shadow:27px 7px 25px 25px rgba(0, 0, 0, 0.774);
+    transform: rotateY(800deg);
+    color: bisque;
+    box-shadow: -500px -57px 20px 20px rgba(0, 0, 0, 0.774);
+
   }
-  
+
   to {
+    box-shadow: 27px 667px 20px 20px rgba(0, 0, 0, 0.774);
+    transform: rotateY(1deg);
     transform: rotateX(1deg);
+    transform: rotateZ(-50deg);
+  } */
+  1% {
+    transform: rotateZ(300deg);
+    transform: rotateX(40deg);
+    transform: rotateY(400deg);
+    color: bisque;
+    box-shadow: -500px -57px 20px 20px rgba(0, 0, 0, 0.329);
+
+  }
+  35%{
+    background: none;
+  }
+  50%{
+     transform: rotateZ(150deg);
+    transform: rotateX(20deg);
+    transform: rotateY(100deg);
+    color: bisque;
+    
+    box-shadow: 550px -7px 20px 20px rgba(0, 0, 0, 0.774);
+   
+
+  }
+90%{
+  transform: rotateY(1deg);
+  transform: rotateX(1deg);
+  transform: rotateZ(-50deg);
+  color: bisque;
+  box-shadow: 257px 567px 20px 20px rgba(0, 0, 0, 0.418);
+  
+
+}
+100%{
+  transform: scale(0.5);
+}
+
+}
+
+.rotation-y {
+  animation: rotation-y infinite 5s alternate-reverse;
+}
+
+
+
+@keyframes rotation-y {
+  from {
+
+
+    transform: rotateX(200deg);
+    background: none;
+    box-shadow: 27px -30px 20px 20px rgba(0, 0, 0, 0.774);
+
+
+  }
+
+  to {
+    box-shadow: 27px 667px 20px 20px rgba(0, 0, 0, 0.774);
+
+    transform: rotateX(-1deg);
+
   }
 }
