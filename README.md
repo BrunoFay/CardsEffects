@@ -2,28 +2,28 @@
 foi utilizado os métodos de animação, transform e box-shadow.
 
 ### Rotação
-transform: rotate
+* transform: rotate
 
 ### Rotação X
-transform: rotateY
+* transform: rotateY
 
 ### Rotação Y
-transform: rotateX
+* transform: rotateX
 
 ### Flip 3D
-transform: skewX
-transform: skewY
+* transform: skewX
+* transform: skewY
 
 ### Zoom
-transform: scale
+* transform: scale
 
 ### Movimento top
-transform: translateY
+* transform: translateY
 
 ### Movimento 3D
-transform: rotateZ
-transform: rotateX
-transform: rotateY
-transform: scale
+* transform: rotateZ
+* transform: rotateX
+* transform: rotateY
+* transform: scale
 
 
