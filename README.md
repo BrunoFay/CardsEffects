@@ -27,3 +27,8 @@ foi utilizado os métodos de animação, transform e box-shadow.
 * transform: scale
 
 
+## Para visualizar um video do projeto, clique na imagem abaixo !
+
+[![Watch the video](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvX7XjW8SbO7M8RFY41EYr8WtFq9QouZ7L5A&usqp=CAU)](https://youtu.be/iB3zg1R9now)
+
+
