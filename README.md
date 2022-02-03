@@ -31,4 +31,8 @@ foi utilizado os métodos de animação, transform e box-shadow.
 
 [![Watch the video](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvX7XjW8SbO7M8RFY41EYr8WtFq9QouZ7L5A&usqp=CAU)](https://youtu.be/iB3zg1R9now)
 
+## Para visualizar o projeto funcionando, clique no link abaixo !
+
+https://cards-effects.vercel.app/
+
 
